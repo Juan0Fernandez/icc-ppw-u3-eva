@@ -1,11 +1,15 @@
 package ec.ecu.ups.icc.employees.companies.services;
 
+import java.math.BigDecimal;
+
 import org.jspecify.annotations.Nullable;
+import org.springframework.stereotype.Service;
 
 import ec.ecu.ups.icc.employees.companies.dtos.CompanySimpleDto;
 import ec.ecu.ups.icc.employees.companies.entities.Company;
 import ec.ecu.ups.icc.employees.companies.repository.CompanyRepository;
 
+@Service
 public class CompanyService {
 
     private CompanyRepository companiesRepository;
@@ -31,6 +35,16 @@ public class CompanyService {
 
     public @Nullable Object listarDepartments(Long id) {
         return companiesRepository.findById(id);
+    }
+
+    public @Nullable Object getCompanyDepartments(Long id) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getCompanyDepartments'");
+    }
+
+    public @Nullable Object getHighSalaryEmployees(Long id, BigDecimal minSalary) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getHighSalaryEmployees'");
     }
     
 }
